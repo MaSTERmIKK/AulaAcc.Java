@@ -1,0 +1,18 @@
+-- UTENTI
+-- username pk "alla fine della dichiarazione delle colonne = PRIMARY KEY (colum)"
+-- password
+-- nazionalità
+-- anno di nascita
+-- mail
+
+-- STATISTICHE
+-- username fk "alla fine della dichhiarazione delle colonne - FOREIGN KEY (colum) REFERENCES ref_table(ref_colum)"
+-- numero di login numeroDiLogin
+-- data utlimo login
+-- numero preferito
+-- numero di volte che ha generato la sequenza -- nSequenzaGenerata
+-- numero più alto generato -- numero_piu_Alto_generato
+-- numero di volte che ha cercato un numero
+-- numero di volte che ha cercato il numero preferito
+-- numero più alto cercato
+-- FOREIGN KEY(username) REFERENCES utenti(username)
