@@ -1,18 +1,18 @@
 -- UTENTI
 -- username pk "alla fine della dichiarazione delle colonne = PRIMARY KEY (colum)"
--- password
--- nazionalità
--- anno di nascita
--- mail
+-- password - not null
+-- nazionalità - enum (italiana, francese, spagnola, tedesca, marziana, portoricana, americana) default 'marziana'
+-- data di nascita - date not null  check(CURRENT_DATE() - data di nascita >= 18)
+-- mail - unique
 
 -- STATISTICHE
 -- username fk "alla fine della dichhiarazione delle colonne - FOREIGN KEY (colum) REFERENCES ref_table(ref_colum)"
--- numero di login numeroDiLogin
--- data utlimo login
--- numero preferito
--- numero di volte che ha generato la sequenza -- nSequenzaGenerata
--- numero più alto generato -- numero_piu_Alto_generato
--- numero di volte che ha cercato un numero
--- numero di volte che ha cercato il numero preferito
--- numero più alto cercato
+-- numero di login - default 0
+-- data utlimo login - date not null
+-- numero preferito - not null
+-- numero di volte che ha generato la sequenza - default 0
+-- numero più alto generato - BIGINT default 0
+-- numero di volte che ha cercato un numero - default 0
+-- numero di volte che ha cercato il numero preferito - default 0
+-- numero più alto cercato - BIGINT default 0
 -- FOREIGN KEY(username) REFERENCES utenti(username)
