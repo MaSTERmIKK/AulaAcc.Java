@@ -3,7 +3,7 @@
 -- password - not null
 -- nazionalità - enum (italiana, francese, spagnola, tedesca, marziana, portoricana, americana) default 'marziana'
 -- data di nascita - date not null  check(CURRENT_DATE() - data di nascita >= 18)
--- mail - unique
+-- mail - unique not null
 
 -- STATISTICHE
 -- username fk "alla fine della dichhiarazione delle colonne - FOREIGN KEY (colum) REFERENCES ref_table(ref_colum)"
