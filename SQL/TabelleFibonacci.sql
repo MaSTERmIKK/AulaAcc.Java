@@ -1,7 +1,7 @@
 -- UTENTI
 -- username pk "alla fine della dichiarazione delle colonne = PRIMARY KEY (colum)"
 -- password - not null
--- nazionalità - enum (italiana, francese, spagnola, tedesca, marziana, portoricana, americana) default 'marziana'
+-- nazionalità - enum (italiana, francese, spagnola, tedesca, marziana, portoricana, americana) default 'marziana' not null
 -- data di nascita - date not null  check(data di nascita <= '2005-01-01')
 -- mail - unique not null
 
