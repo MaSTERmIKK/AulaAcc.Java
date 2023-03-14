@@ -1,0 +1,11 @@
+autori(nome(PK), anno_nascita, anno_morte, nazione)
+libri(titolo(PK), autore(FK)(PK), anno_pb)
+
+NOTE:
+omesso vincolo NOT NULL a tutte le colonne delle tabelle a parte eccezioni.
+
+autori: varchar per le colonne nome e nazione; anno_nascita e anno_morte int (con nascita range da 0 a 2020 e morte da 0 a 2023)
+        vincoli: anno_morte deve essere maggiore di anno_nascita(implementato via codice), anno_morte default 0 per indicare che sia ancora in vita.
+
+libri: titolo varchar, anno_pb int (con range da 0 a 2023)
+        vincoli: anno_pb sia maggiore dell'anno di nascita dell'autore(implementato via codice).
