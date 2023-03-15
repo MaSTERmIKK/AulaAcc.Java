@@ -23,25 +23,14 @@ public class CreazioneBiblioteca {
     }
 
     private static void CreateTables(Connection connection) {
-        StatementTable(
-                "CREATE TABLE autori(nome varchar(50) primary key, anno_nascita int not null, anno_morte int default 0 not null, nazione varchar(50) not null);",
-                connection);
+        String query;
 
-        StatementTable(
-                "CREATE TABLE libri(titolo varchar(50), autore varchar(50), anno_pb int not null, primary key(titolo, autore), foreign key (autore) references autori (nome));",
-                connection);
+        query = "CREATE TABLE autori(nome varchar(50) primary key, anno_nascita int not null, anno_morte int default 0 not null, nazione varchar(50) not null);";
+        ConnessioneDB.ExecuteQuery(query, connection);
+
+        query = "CREATE TABLE libri(titolo varchar(50), autore varchar(50), anno_pb int not null, primary key(titolo, autore), foreign key (autore) references autori (nome));";
+        ConnessioneDB.ExecuteQuery(query, connection);
         
          System.out.println("Inserimento tabelle terminato");
-    }
-    private static void StatementTable(String query, Connection connection) {
-        if (connection == null)
-            return;
-
-        try {
-            Statement stAutori = connection.createStatement();
-            stAutori.execute(query);
-        } catch (SQLException e) {
-            System.out.println("ERRORE " + e.getMessage());
-        }
     }
 }
